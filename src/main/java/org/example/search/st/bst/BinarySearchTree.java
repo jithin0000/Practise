@@ -53,6 +53,33 @@ public class BinarySearchTree<Key extends  Comparable<Key>, Value> {
         else return x.value;
     }
 
+    public Key min(){
+        if(root==null)return null;
+        return min(root).key;
+    }
+    private Node min(Node x){
+        if(x.left==null)return x;
+        return min(x.left);
+    }
+
+    public Key floor(Key k)
+    {
+        Node f =  floor(root,k);
+        if(f==null)return null;
+        return f.key;
+    }
+    private Node floor(Node x, Key k)
+    {
+        if(x==null)return null;
+        int cmp = k.compareTo(x.key);
+        if (cmp==0)return x;
+       if(cmp<0)return floor(x.left,k) ;
+       Node t  = floor(x.right,k);
+       if(t!=null) return t;
+       else return x;
+
+    }
+
 
 
 

@@ -24,6 +24,26 @@ class BinarySearchTreeTest {
         assertNull(SUT.get("Q"));
         assertEquals(SUT.size(),10);
     }
+
+    @Test
+    void testmin() {
+        for (int i = 0; i < t1.length; i++) {
+            SUT.put(t1[i], i);
+        }
+        assertEquals(SUT.min(),"A");
+
+    }
+
+    @Test
+    void testFloor() {
+        for (int i = 0; i < t1.length; i++) {
+            SUT.put(t1[i], i);
+        }
+
+        assertEquals(SUT.floor("G"), "E");
+        assertEquals(SUT.floor("X"), "X");
+
+    }
 }
 
 
