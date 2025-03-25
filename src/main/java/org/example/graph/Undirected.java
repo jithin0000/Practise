@@ -35,10 +35,6 @@ public class Undirected implements Graph {
 
     @Override
     public Iterable<Integer> adj(int v) {
-        Stack<Integer> stack = new Stack<>();
-        for (Integer i : adj[v]) {
-            stack.push(i);
-        }
-        return stack;
+        return adj[v];
     }
 }
