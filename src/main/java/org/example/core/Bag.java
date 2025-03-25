@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class Bag<Item> implements Iterable<Item> {
     private final LinkedList<Item> list = new LinkedList<>();
 
-    void add(Item item)
+    public void add(Item item)
     {
         list.insertAtTheBeginning(item);
     }
