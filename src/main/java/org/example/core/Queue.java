@@ -29,4 +29,8 @@ public class Queue<Item> implements Iterable<Item> {
     public Iterator<Item> iterator() {
         return q.iterator();
     }
+
+    public boolean empty() {
+        return N==0;
+    }
 }

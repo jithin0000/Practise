@@ -50,6 +50,7 @@ public class LinkedList<Item> implements Iterable<Item> {
         if(N==0)throw new RuntimeException("no item");
         Item item = first.value;
         first=first.next;
+        if(first==null)last=null;
         N--;
         return item;
     }
